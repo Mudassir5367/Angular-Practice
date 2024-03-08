@@ -1,0 +1,58 @@
+<h1>{{title}}</h1>
+<!-- <p *ngIf="isDrive !== 17 || isDrive < 18  ">Your age is greater than 18</p>
+<p *ngIf="isDrive <= 18 && isDrive !== 18  ">Your age is not greater than 18</p>
+<h2 *ngIf="loggedIn">welcome {{username}}</h2>
+<h2 *ngIf="!loggedIn">Please Login to view the content</h2>
+<h2 *ngIf="!loggedIn; else loggedOut">welcome {{username}} </h2>
+<ng-template #loggedOut>please login</ng-template> <br> -->
+
+
+<!-- scnario base *ngif -->
+<input type="text" [(ngModel)] = 'password' *ngIf="showPassword; else showPasswordBtn">
+<ng-template #showPasswordBtn>
+    <input type="password" [(ngModel)] = 'password' >
+</ng-template>
+<button (click) = 'toggle()'>{{showPassword ? 'Hide': 'Show'}}</button>
+<hr>
+
+<!-- <ul>
+    <li *ngFor="let arr of names; let i = index">{{i}}-{{arr}}</li>
+</ul>
+
+<div [ngSwitch] = 'graded'>
+    <p *ngSwitchCase = "'A'">Execellent</p>
+    <p *ngSwitchCase = "'B'">Good</p>
+    <p *ngSwitchCase = "'C'">Average</p>
+</div> -->
+
+
+
+<!-- task -->
+<div>
+    <div>
+        <input type="number" placeholder="Search Age" [(ngModel)]="searchAge">
+        <!-- <button (click)="filterData()">Search</button> -->
+        <br>
+    </div>
+    <table border="1" cellspacing="0" cellpadding="10"> 
+       <tbody>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+        </tr>
+        <tr *ngFor="let arr of data">            
+                <td>{{ arr.name }}</td>
+                <td>{{ arr.age }}</td>
+                <td>{{ arr.gender }}</td>
+        </tr>
+        <!-- <tr *ngFor="let filteredData of data">
+            <td *ngIf="filteredData.age == this.searchAge || filteredData.age > this.searchAge ">{{filteredData.age}}</td>
+
+        </tr> -->
+       </tbody>
+    </table>
+</div>
+
+
+    
