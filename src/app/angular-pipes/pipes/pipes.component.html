@@ -1,0 +1,39 @@
+<h1>{{title | uppercase}}</h1>
+
+<!-- 1:DatePipe: Formats dates. -->
+<p>Today is : {{today}}</p>
+<p>Today is : {{today | date}}</p>
+<p>Today is : {{today | date :"fullDate"}}</p>
+<p>Today is : {{today | date :"hh:mm:ss"}}</p>
+<p>Today is : {{today | date :"h:m:s"}}</p>
+<p>{{ today | date :'short'}}</p>
+<hr>
+<!-- 2:currency -->
+<p>{{currency | currency}}</p>
+<p>{{currency | percent}}</p>
+<p>{{currency | currency:'EUR' }}</p>
+<p>{{currency | currency:'USD' : "symbol":"2.1-3"}}</p>
+<hr>
+<!-- 3:LowerCasePipe/uppercase/titlecase: Converts strings to lowercase -->
+<p>{{ 'HELLO' | lowercase }}</p>
+<p>{{ 'HELLO' | uppercase }}</p>
+<p>{{ 'hello world good morning ' | titlecase }}</p>
+<hr>
+<!-- 4:JsonPipe: Converts JavaScript objects into JSON strings. -->
+<p>{{ object | json }}</p>
+<hr>
+<!-- 5:AsyncPipe: Handles asynchronous data by subscribing to observables or promises. -->
+<!-- <p>{{ asyncData | async }}</p>
+<hr> -->
+<!-- 6:SlicePipe: Extracts a section of an array or string. -->
+<p>{{ '1234567890' | slice: 0:5 }}</p>
+<hr>
+<!-- 7:KeyValuePipe: Transforms objects or maps into an array of key-value pairs. -->
+<ul>
+    <li *ngFor="let item of object | keyvalue">{{ item.key }}: {{ item.value }}</li>
+  </ul>
+  <!-- 8:FilterPipe: Filters an array based on a predicate function. -->
+  <!-- <ul>
+    <li *ngFor="let item of items | filter: 'value'">{{ item }}</li>
+  </ul> -->
+

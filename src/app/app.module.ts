@@ -7,13 +7,15 @@ import { OneWayBindingComponent } from './bindings/one-way-binding/one-way-bindi
 import { TwoWayBindingComponent } from './bindings/two-way-binding/two-way-binding/two-way-binding.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './structure-directives/directives/directives.component';
+import { PipesComponent } from './angular-pipes/pipes/pipes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OneWayBindingComponent,
     TwoWayBindingComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
