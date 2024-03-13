@@ -1,0 +1,16 @@
+<h1>Tempalte Form</h1>
+<form #userForm = 'ngForm' (ngSubmit)='submitData(userForm)'>
+    <div>
+        <label for="name">Name : </label>
+        <input type="text" placeholder="Enter Name" name="name" [(ngModel)]="form.name" required>
+    </div>
+    <br>
+    <div>
+        <label for="email">E-mail : </label>
+        <input type="email" placeholder="Enter E-mail" name="email" [(ngModel)]="form.email" required>
+    </div>
+    <br>
+    <div>
+        <button type="submit" [disabled] = "userForm.invalid || !emailValidate() || !nameValidate()">Submit</button>
+    </div>
+</form>
