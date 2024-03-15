@@ -12,6 +12,8 @@ import { PracticeService } from './services/practice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
 import { ReactiveComponent } from './forms/reactive-form/reactive/reactive.component';
+import { ParentComponent } from './components-communications/parents/parent/parent.component';
+import { ChildComponent } from './components-communications/childs/child/child.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ReactiveComponent } from './forms/reactive-form/reactive/reactive.compo
     DirectivesComponent,
     PipesComponent,
     TemplateDrivenComponent,
-    ReactiveComponent
+    ReactiveComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,4 @@
+<div>
+    <h1>Components Communications / Parent-Child</h1>
+    <app-child [dataToChild] = 'data' (objectToParent)="receiveObject($event)" (dataToParent) = 'deleteItem()'></app-child>
+</div>
