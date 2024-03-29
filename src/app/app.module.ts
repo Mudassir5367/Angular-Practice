@@ -14,6 +14,7 @@ import { TemplateDrivenComponent } from './forms/template-driven/template-driven
 import { ReactiveComponent } from './forms/reactive-form/reactive/reactive.component';
 import { ParentComponent } from './components-communications/parents/parent/parent.component';
 import { ChildComponent } from './components-communications/childs/child/child.component';
+import { CrudComponent } from './crud/crud/crud.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ChildComponent } from './components-communications/childs/child/child.c
     TemplateDrivenComponent,
     ReactiveComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    CrudComponent
   ],
   imports: [
     BrowserModule,
