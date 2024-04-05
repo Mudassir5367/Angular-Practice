@@ -59,7 +59,8 @@ this.userForm = formBuilder.group({
     );
   }
 
-  submitData(){
+  submitData(data:any){
+console.log(data.value);
 
   }
   
